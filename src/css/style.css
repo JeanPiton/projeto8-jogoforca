@@ -47,9 +47,16 @@
     font-family: 'Noto Sans';
     font-weight: 700;
     font-size: 50px;
-    
+    color:black;
 }
 
+.palavra[win="true"]{
+    color:green;
+}
+
+.palavra[win="false"]{
+    color:red;
+}
 /*Letra*/
 .areaL{
     width:100%;
