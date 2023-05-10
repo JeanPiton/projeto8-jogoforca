@@ -79,8 +79,12 @@ const LETRA = {
         font-weight: 700;
         font-size: 16px;
         color: #798A9F;
-        background-color: #E1ECF4;
-        :disabled{background-color: #9FAAB5;}
+        &:enabled {
+            background: #E1ECF4;
+        }
+        &:disabled {
+            background: #9FAAB5;
+        }
     `
 };
 
