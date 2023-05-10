@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {APP} from "./css/style";
 import Jogo from "./Jogo";
 import Letras from "./Letras";
 import palavras from "./palavras";
@@ -76,11 +77,11 @@ export default function App() {
   return (
     <div className="App">
       <Jogo botao={newWord} errors={errors} word={word} answer={answer} win={win}/>
-      <div className="areaL">
-        <div className="letras">
+      <APP.areaL>
+        <APP.letras>
           {alfabeto.map(letter => <Letras letra={letter} key={letter} func={disable} active={list[letter]}/>)}
-        </div>
-      </div>
+        </APP.letras>
+      </APP.areaL>
     </div>
   );
 }

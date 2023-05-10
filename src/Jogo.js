@@ -6,24 +6,26 @@ import f4 from "./assets/forca4.png";
 import f5 from "./assets/forca5.png";
 import f6 from "./assets/forca6.png";
 
+import {JOGO} from "./css/style";
+
 const f = [f0,f1,f2,f3,f4,f5,f6];
 
 export default function Jogo(props){
     return(
-        <div className="jogo">
-            <div className="imagem">
-                <img src={f[props.errors]} alt="forca"/>
-            </div>
-            <div className="direita">
-                <div className="botao">
-                    <button onClick={props.botao}>
+        <JOGO.jogo>
+            <JOGO.imagem>
+                <JOGO.img src={f[props.errors]} alt="forca"/>
+            </JOGO.imagem>
+            <JOGO.direita>
+                <JOGO.divbotao>
+                    <JOGO.botao onClick={props.botao}>
                         Escolher palavra
-                    </button>
-                </div>
-                <div className="palavra" win={props.win}>
+                    </JOGO.botao>
+                </JOGO.divbotao>
+                <JOGO.palavra win={props.win}>
                     {props.answer}
-                </div>
-            </div>
-        </div>
+                </JOGO.palavra>
+            </JOGO.direita>
+        </JOGO.jogo>
     )
 }

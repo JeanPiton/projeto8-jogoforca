@@ -1,7 +1,8 @@
+import {LETRA} from "./css/style";
 export default function Letras(props){
     return(
-        <button onClick={()=>props.func(props.letra)} className="letra" disabled={props.active}>
+        <LETRA.letra onClick={()=>props.func(props.letra)} className="letra" disabled={props.active}>
             {props.letra.toUpperCase()}
-        </button>
+        </LETRA.letra>
     )
 }
