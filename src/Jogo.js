@@ -14,15 +14,15 @@ export default function Jogo(props){
     return(
         <JOGO.jogo>
             <JOGO.imagem>
-                <JOGO.img src={f[props.errors]} alt="forca"/>
+                <JOGO.img src={f[props.errors]} alt="forca" data-test="game-image"/>
             </JOGO.imagem>
             <JOGO.direita>
                 <JOGO.divbotao>
-                    <JOGO.botao onClick={props.botao}>
+                    <JOGO.botao onClick={props.botao} data-test="choose-word">
                         Escolher palavra
                     </JOGO.botao>
                 </JOGO.divbotao>
-                <JOGO.palavra win={props.win}>
+                <JOGO.palavra win={props.win} data-test="word">
                     {props.answer}
                 </JOGO.palavra>
             </JOGO.direita>
