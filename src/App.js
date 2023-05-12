@@ -14,16 +14,18 @@ export default function App() {
   const [answer,setAnswer] = useState("");
   const [win,setWin] = useState();
   
-  function userInput(l=null, w=[...word], r=false){
+  function userInput(l=null, w=word, r=false){
     const newAnswer = [];
+    const nword = w.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const newWord = [...nword];
     let erro = errors;
     let c=0;
-    w.forEach((e,i) => {
+    [...w].forEach((e,i) => {
       console.log(e,l);
-      if(e==l){
-        newAnswer.push(l);
+      if(e.normalize("NFD").replace(/[\u0300-\u036f]/g, "")==l){
+        newAnswer.push(e);
       }else if(answer && r==false){
-        if(!w.includes(l)){
+        if(!newWord.includes(l)){
           c++;
         }
         newAnswer.push(answer[i]);
@@ -70,7 +72,7 @@ export default function App() {
     setDisable({...lista});
     setWord(newPalavra);
     setAnswer(newAnswer);
-    userInput(null,[...newPalavra],true);
+    userInput(null,newPalavra,true);
     setErrors(0);
     setWin();
   }
