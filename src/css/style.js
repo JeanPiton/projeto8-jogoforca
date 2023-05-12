@@ -31,8 +31,8 @@ imagem : styled.div`
 `,
 
 img : styled.img`
-    width: 400px;
-    height: 466.67px;
+    width: 350px;
+    height: 408px;
 `,
 
 divbotao : styled.div`
@@ -88,4 +88,46 @@ const LETRA = {
     `
 };
 
-export {APP, JOGO, LETRA};
+const CHUTE = {
+    areaChute:styled.div`
+        width:100%;
+        display:flex;
+        align-itens:center;
+        justify-content:center;
+        text-align: center; 
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 20px;
+        background-color:red;
+    `,
+
+    textoChute:styled.p`
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        margin:0 7px;
+    `,
+
+    inputChute:styled.input`
+        width:353px;
+        margin:0 7px;
+        border: 1px solid #CCCCCC;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 3px;
+    `,
+
+    buttonChute:styled.button`
+        idth: 100px;
+        height: 40px;
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 16px;
+        color:#3C76A1;
+        background-color: #E1ECF4;
+        border: 1px solid #7AA7C7;
+        border-radius: 3px;
+        margin:0 7px;
+    `
+};
+
+export {APP, JOGO, LETRA, CHUTE};
