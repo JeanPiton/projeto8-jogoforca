@@ -79,6 +79,7 @@ export default function App() {
         lista[key] = true;
       }
       setDisable({...lista}); 
+      setGuessDisabled(true);
       setWin("true");
     }else if(erro == 6 && r==false){
       const lista = {...list};
@@ -87,6 +88,7 @@ export default function App() {
       }
       setAnswer(word);
       setDisable({...lista});
+      setGuessDisabled(true);
       setWin("false");
     }
   }
