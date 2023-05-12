@@ -42,6 +42,7 @@ export default function App() {
       }
       setAnswer(word);
       setDisable({...lista});
+      setGuessDisabled(true);
       setWin("false");
       setErrors(6);
     }
