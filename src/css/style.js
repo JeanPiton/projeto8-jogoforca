@@ -33,6 +33,7 @@ imagem : styled.div`
 img : styled.img`
     width: 350px;
     height: 408px;
+    margin: 10px 0 0 20px;
 `,
 
 divbotao : styled.div`
@@ -50,6 +51,7 @@ botao : styled.button`
     background-color: #27AE60;
     border-radius: 8px;
     border-style: none;
+    margin: 20px 40px 0 0;
 `,
 
 palavra : styled.div`
@@ -98,7 +100,6 @@ const CHUTE = {
         font-family: 'Roboto';
         font-weight: 700;
         font-size: 20px;
-        background-color:red;
     `,
 
     textoChute:styled.p`
@@ -127,6 +128,7 @@ const CHUTE = {
         border: 1px solid #7AA7C7;
         border-radius: 3px;
         margin:0 7px;
+        &:disabled{filter:brightness(65%);opacity:0.7}
     `
 };
 
